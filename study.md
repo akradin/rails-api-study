@@ -31,7 +31,7 @@ In your own words, define what the responsibilities of the model layer are in
 Rails.
 
 ```md
-<!-- your answer here -->
+Models talk to whatever database is being worked on through classes. They also store and validate data. The way I understand it is models perform most of the CRUD actions.
 ```
 
 ## Define Controller Responsiblities
@@ -40,7 +40,7 @@ In your own words, define what the responsibilities of the controller layer are
 in Rails.
 
 ```md
-<!-- your answer here -->
+While CRUD is mostly backend stuff handled by the model, the controller will send the directions to the model. So, a user wants to change the page or access something from the page, the controller will handle the request and tell the model to perform the action.
 ```
 
 ## Define Router Responsiblities
@@ -48,7 +48,7 @@ in Rails.
 In your own words, define what the router does in Rails.
 
 ```md
-<!-- your answer here -->
+The router is what tells the controller that something needs to happen. A request is made and the router determines which controller should process the request.
 ```
 
 ## The Request-Response Cycle in Rails
@@ -57,5 +57,5 @@ Starting with a client making a GET request to a particular URL, describe how
 the parts of Rails interact to produce and send a response.
 
 ```md
-<!-- your answer here -->
+The client makes the request via URL and then the router will process that request. It 'routes' whatever user action has been made to the proper controller. The controller will then perform whatever actions are necessary to handle the users request. If there is some user database action going on such as logging in or purchasing something then the controller will notify the model to validate whatver CRUD action is being performed
 ```
